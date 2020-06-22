@@ -10,6 +10,7 @@ import Card from "../../components/Card"
 function Protfolio() {
   const projects = [
     {
+      id: 1,
       name: 'Home Body',
       image: homeBody,
       description: `A full stack health app that allows user to sing-up and login so that
@@ -18,6 +19,7 @@ function Protfolio() {
       github: 'https://github.com/Alex-Bailon/health-app'
     },
     {
+      id: 2,
       name: 'Flyte',
       image: Flyte,
       description: `Stock market app that gets information from three APIs. With a
@@ -27,6 +29,7 @@ function Protfolio() {
       github: 'https://github.com/kyleres/Finance_App'
     },
     {
+      id: 3,
       name: 'Weather Dashboard',
       image: Weather,
       description: `A weather app that gets information from an API and displays
@@ -36,6 +39,7 @@ function Protfolio() {
       github: 'https://github.com/Alex-Bailon/weather-dashboard'
     },
     {
+      id: 4,
       name: 'Code Quiz',
       image: CodeQuiz,
       description: `A fun short quiz that uses JS to render questions and display
@@ -45,6 +49,7 @@ function Protfolio() {
       github: 'https://github.com/Alex-Bailon/code-quiz'
     },
     {
+      id: 5,
       name: 'Burger App',
       image: bugerApp,
       description: `An app that allows the user to input their favorite burgers,
@@ -54,6 +59,7 @@ function Protfolio() {
       github: 'https://github.com/Alex-Bailon/burger'
     },
     {
+      id: 6,
       name: 'Day Planner',
       image: DayPlanner,
       description: `A simple day planner for regular business hours. Displays
