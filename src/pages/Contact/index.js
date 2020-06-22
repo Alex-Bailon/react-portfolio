@@ -8,11 +8,11 @@ function Contact() {
   }
   return (
     <>
-      <div class="row mt-2 py-1 px-1">
+      <div class="row mt-2 mb-2 py-1 px-1">
             <h1>Contact</h1>
       </div>
       <div class= "row">
-        <div class="col-md-4 col-sm-12">
+        <div class="col-md-4 col-sm-12 mb-3">
           <div class="card bg-light mb-2" style={ style.card }>
             <div class="card-header"><i class="fas fa-phone-square"> Phone Number</i></div>
             <div class="card-body">
@@ -20,7 +20,7 @@ function Contact() {
             </div>
           </div>
         </div>
-        <div class="col-md-4 col-sm-12">
+        <div class="col-md-4 col-sm-12 mb-3">
           <div class="card bg-light mb-2" style={ style.card }>
             <div class="card-header"><i class="fas fa-inbox"> Email</i></div>
             <div class="card-body">
@@ -28,7 +28,7 @@ function Contact() {
             </div>
           </div>
         </div> 
-        <div class="col-md-4 col-sm-12">
+        <div class="col-md-4 col-sm-12 mb-3">
           <div class="card bg-light mb-2" style={ style.card }>
             <div class="card-header"><i class="fab fa-github-square"> Github</i></div>
             <div class="card-body">
@@ -36,7 +36,7 @@ function Contact() {
             </div>
           </div>
         </div>
-        <div class="col-md-4 col-sm-12">
+        <div class="col-md-4 col-sm-12 mb-3">
           <div class="card bg-light mb-2" style={ style.card }>
             <div class="card-header"><i class="fab fa-linkedin"> Linked-In</i></div>
             <div class="card-body">
@@ -44,7 +44,7 @@ function Contact() {
             </div>
           </div>
         </div> 
-        <div class="col-md-4 col-sm-12">
+        <div class="col-md-4 col-sm-12 mb-3">
           <div class="card bg-light mb-2" style={ style.card }>
           <div class="card-header"><i class="fas fa-file-pdf"> Resume</i></div>
             <div class="card-body">

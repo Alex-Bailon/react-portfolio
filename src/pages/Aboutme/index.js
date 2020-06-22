@@ -4,11 +4,11 @@ import image from "./AlexBailon.jpg"
 function Aboutme() {
   return (
     <>
-        <div class="row mt-2 py-1 px-1">
+        <div class="row mt-2 mb-2 py-1 px-1">
           <h1>About Me</h1>
         </div>
         <div class="row">
-          <div class="col-lg-6 pb-1">
+          <div class="col-lg-6 pb-1 mb-3">
             <img src={ image } class="img-fluid" alt=" of Alex Bailon at the Grand Canyon"/>
           </div>
           <div class="col-lg-6">
