@@ -1,14 +1,15 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
+import image from "./AlexBailon.jpg"
 
 function Aboutme() {
   return (
     <>
-        <div class="row mt-5 py-1 px-1">
+        <div class="row mt-2 py-1 px-1">
           <h1>About Me</h1>
         </div>
         <div class="row">
           <div class="col-lg-6 pb-1">
-            <img src="./assets/images/AlexBailon.jpg" class="img-fluid" alt="Photo of Alex Bailon at the Grand Canyon"/>
+            <img src={ image } class="img-fluid" alt=" of Alex Bailon at the Grand Canyon"/>
           </div>
           <div class="col-lg-6">
             <p>

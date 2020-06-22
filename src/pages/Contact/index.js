@@ -48,7 +48,7 @@ function Contact() {
           <div class="card bg-light mb-2" style={ style.card }>
           <div class="card-header"><i class="fas fa-file-pdf"> Resume</i></div>
             <div class="card-body">
-              <p class="card-text"><a href="./assets/images/Alex-Bailon_Resume.pdf" target="_blank"> Alex Bailon</a></p>
+              <p class="card-text"><a href="https://alex-bailon.github.io/assets/images/Alex-Bailon_Resume.pdf" target="_blank"> Alex Bailon</a></p>
             </div>
           </div>
         </div>      
