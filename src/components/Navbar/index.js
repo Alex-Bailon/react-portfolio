@@ -1,6 +1,5 @@
 import React from "react";
 
-// Depending on the current path, this component sets the "active" class on the appropriate navigation link item
 function Navbar() {
 
   return (
@@ -18,7 +17,7 @@ function Navbar() {
             <a class="nav-link" href="#">Portfolio</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Contact</a>
+            <a class="nav-link" href="/contact">Contact</a>
           </li>
         </ul>
       </div>

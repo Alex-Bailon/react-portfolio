@@ -1,7 +1,7 @@
 import React from "react";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import Signup from "./pages/Signup";
-import Search from "./pages/Search";
+import Contact from "./pages/Contact";
 import Aboutme from "./pages/Aboutme"
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
@@ -17,7 +17,7 @@ function App() {
         <Wrapper>
           <Route exact path="/" component={Aboutme} />
           <Route exact path="/signup" component={Signup} />
-          <Route exact path="/search" component={Search} />
+          <Route exact path="/contact" component={Contact} />
         </Wrapper>
         <Footer />
       </div>
