@@ -6,6 +6,7 @@ function Footer() {
     <footer className="footer position-relative py-3">
     <span className="text-muted text-center">
       Made by Alex Bailon <br />
+      Made with React <br />
       2020 </span>
   </footer>
   );

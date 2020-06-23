@@ -71,7 +71,7 @@ function Protfolio() {
   ]
   return (
     <>
-      <div className="row mt-2 mb-3 py-1 px-1">
+      <div className="row mt-2 py-1 px-1">
         <h1>Portfolio</h1>
       </div>
       <div className="row row-cols-1 row-cols-md-3">

@@ -3,12 +3,12 @@ import React from "react";
 function Contact() {
   const style = {
     card: {
-      "max-width": "18rem"
+      "maxWidth": "18rem"
     }
   }
   return (
     <>
-      <div className="row mt-2 mb-2 py-1 px-1">
+      <div className="row mt-2 py-1 px-1">
             <h1>Contact</h1>
       </div>
       <div className= "row">

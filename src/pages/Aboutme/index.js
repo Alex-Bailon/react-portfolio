@@ -15,7 +15,7 @@ function Aboutme() {
             <p>
               My name is Alex Bailon and I am from the Los Angeles Metropolitan area. I am 
               currently attending Northwestern University in Evanston, IL.  At Northwestern 
-              I am taking a full stack flex coding bootcamp which is an intensive six month 
+              I am taking a full stack coding bootcamp which is an intensive six month 
               web development course. A few of the covered in the course are HTML5, CSS3, 
               JavaScript, jQuery, Bootstrap (and other CSS Frameworks), Express.js, React.js, 
               Node.js, Database Theory, MongoDB, MySQL, Git and more. I am on track to graduate 
