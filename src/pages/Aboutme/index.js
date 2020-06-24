@@ -1,5 +1,6 @@
 import React from "react";
 import image from "./AlexBailon.jpg"
+import "./style.css"
 
 function Aboutme() {
   return (
