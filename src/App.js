@@ -9,16 +9,11 @@ import Wrapper from "./components/Wrapper";
 
 function App() {
   document.title = "Alex Bailon";
-  const [ page, setPage ] = useState("AboutMe")
-  const handlePageChange = (newPage) => {
-    console.log(newPage)
-    setPage(newPage)
-    console.log(page)
-  }
+
   return (
     <Router>
         <div>
-          <Navbar page = { page } handlePageChange={ handlePageChange }/>
+          <Navbar/>
           <Wrapper>
             <Route exact path="/" component={Aboutme} />
             <Route exact path="/portfolio" component={Portfolio} />
