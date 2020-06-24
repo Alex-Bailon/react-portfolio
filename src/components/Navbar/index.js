@@ -1,7 +1,8 @@
 import React from "react";
+import { Link, useLocation } from "react-router-dom"
 
 function Navbar() {
-
+  const { pathname } = useLocation()
   return (
     <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
       <a className="navbar-brand" href="/">Alex Bailon</a>
@@ -11,13 +12,13 @@ function Navbar() {
       <div className="collapse navbar-collapse" id="navbarNav">
         <ul className="navbar-nav">
           <li className="nav-item">
-            <a className="nav-link" href="/">About Me</a>
+          <Link className="nav-link" className={ `nav-link ${ pathname === "/" && "active"}` } to="/">About Me</Link>
           </li>
           <li className="nav-item">
-            <a className="nav-link" href="/portfolio">Portfolio</a>
+            <Link className="nav-link" className={ `nav-link ${ pathname === "/portfolio" && "active"}` } to="/portfolio">Portfolio</Link>
           </li>
           <li className="nav-item">
-            <a className="nav-link" href="/contact">Contact</a>
+          <Link className="nav-link" className={ `nav-link ${ pathname === "/contact" && "active"}` } to="/contact">Contact</Link>
           </li>
         </ul>
       </div>
