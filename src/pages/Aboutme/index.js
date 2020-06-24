@@ -14,16 +14,17 @@ function Aboutme() {
           </div>
           <div className="col-lg-6">
             <p>
-              My name is Alex Bailon and I am from the Los Angeles Metropolitan area. I am 
-              currently attending Northwestern University in Evanston, IL.  At Northwestern 
-              I am taking a full stack coding bootcamp which is an intensive six month 
-              web development course. A few of the covered in the course are HTML5, CSS3, 
-              JavaScript, jQuery, Bootstrap (and other CSS Frameworks), Express.js, React.js, 
-              Node.js, Database Theory, MongoDB, MySQL, Git and more. I am on track to graduate 
-              from the course in July 2020. 
+            Full-Stack Web Developer with a background in customer service ensuring that customers are always fully 
+            satisfied with the product and service they receive. Recently earned a certificate in Full Stack 
+            Development from Northwestern University, with developed skills in JavaScript, CSS3, React.js, and responsive 
+            web design. Having analytical problem solving skills and adaptableness, worked alongside a team to efficiently 
+            create and develop mobile-first applications. With everyone’s contribution and the use of my JavaScript, 
+            Express and MySQL skills, the team and I were able to successfully create a health app that allows users to 
+            create a user login and keep track of their nutrition intake. Optimistic to support a fast-paced, quality-driven 
+            team to build better experiences on the web for users and customers. 
             </p>
             <p>
-              I have also been doing freelance work for Fusion92 as a Software Developer where I use MJML to create HTML 
+              Currently doing freelance work for Fusion92 as a Software Developer where I use MJML to create HTML 
               content that is used for emails and landing pages. I have also used Email on Acid
               to ensure that the HTML that MJML are fully responsive on different types of operating
               systems and email clients.
