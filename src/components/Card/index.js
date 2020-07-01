@@ -21,8 +21,8 @@ function Card( { projects }) {
           </div>
         </div>
       </div>
-  ))}
-  </>
+    ))}
+    </>
   )
 }
 
