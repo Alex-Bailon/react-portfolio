@@ -6,11 +6,23 @@ import DayPlanner from "./DayPlanner.png"
 import Flyte from "./Flyte.png"
 import Weather from "./WeatherDashboard.png"
 import Card from "../../components/Card"
+import fetch from './fetch.png'
 
 function Protfolio() {
   const projects = [
     {
       id: 1,
+      name: 'Fetch',
+      image: fetch,
+      description: `Fetch is a Tinder for dogs. This app allows the user to create
+                    an account and start matching with other dogs. Using MERN my team
+                    and I were able to build this app from the ground up in just two
+                    weeks`,
+      live: 'https://fetch-woof-312.herokuapp.com/',
+      github: 'https://github.com/raise-da-woof/fetch'
+    },
+    {
+      id: 2,
       name: 'Home Body',
       image: homeBody,
       description: `A full stack health app that allows user to sing-up and login so that
@@ -19,7 +31,7 @@ function Protfolio() {
       github: 'https://github.com/Alex-Bailon/health-app'
     },
     {
-      id: 2,
+      id: 3,
       name: 'Flyte',
       image: Flyte,
       description: `Stock market app that gets information from three APIs. With a
@@ -29,24 +41,14 @@ function Protfolio() {
       github: 'https://github.com/kyleres/Finance_App'
     },
     {
-      id: 3,
+      id: 4,
       name: 'Weather Dashboard',
       image: Weather,
       description: `A weather app that gets information from an API and displays
-                    the current and five day weather forecast for the searched
-                    city. Saves cities into local storage.`,
+      the current and five day weather forecast for the searched
+      city. Saves cities into local storage.`,
       live: 'https://alex-bailon.github.io/weather-dashboard/',
       github: 'https://github.com/Alex-Bailon/weather-dashboard'
-    },
-    {
-      id: 4,
-      name: 'Code Quiz',
-      image: CodeQuiz,
-      description: `A fun short quiz that uses JS to render questions and display
-                    them onto the html. At the end of quiz user can save score and
-                    high scores are saved to local storage.`,
-      live: 'https://alex-bailon.github.io/code-quiz/',
-      github: 'https://github.com/Alex-Bailon/code-quiz'
     },
     {
       id: 5,
