@@ -18,7 +18,7 @@ function Aboutme() {
             satisfied with the product and service they receive. Recently earned a certificate in Full Stack 
             Development from Northwestern University, with developed skills in JavaScript, CSS3, React.js, and responsive 
             web design. Having analytical problem solving skills and adaptableness, worked alongside a team to efficiently 
-            create and develop mobile-first applications. With everyone’s contribution and the use of my MERN ( MongoDB, Express,
+            create and develop mobile-first applications. With everyone’s contribution and the use of MERN ( MongoDB, Express,
              React, Node), the team and I were able to successfully create a dog dating app that allows users to 
             create a user login and swip on other dogs to set up a play date. Optimistic to support a fast-paced, quality-driven 
             team to build better experiences on the web for users and customers. 
