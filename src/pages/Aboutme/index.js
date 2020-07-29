@@ -1,8 +1,13 @@
-import React from "react";
+import React, { useEffect } from "react";
+import axios from 'axios'
 import image from "./AlexBailon.jpg"
 import "./style.css"
 
 function Aboutme() {
+  useEffect(()=> {
+    axios.get('https://script.google.com/macros/s/AKfycbynlVv_y_xTTtwlAkvXTVVf0FHWIUV0yDWeiQsR_m7QEGrGqb_7/exec', { form_field_test: Date.call()})
+    .then( res => console.log('done'))
+  }, [])
   return (
     <>
         <div className="row mt-2 mb-2 py-1 px-1">
@@ -24,10 +29,11 @@ function Aboutme() {
             team to build better experiences on the web for users and customers. 
             </p>
             <p>
-              Currently doing freelance work for Fusion92 as a Software Developer where I use MJML to create HTML 
+              Currently doing freelance work for Fusion92 as a Software Developer use MJML to create HTML 
               content that is used for emails and landing pages. I have also used Email on Acid
-              to ensure that the HTML that MJML are fully responsive on different types of operating
-              systems and email clients.
+              to ensure the code is fully responsive on different types of operating systems and email clients.
+              I work with the Project Manager and Account Supervisor to ensure everything is 100% accurate to meet 
+              and exceed the clients standards.
             </p>
           </div>
         </div>
