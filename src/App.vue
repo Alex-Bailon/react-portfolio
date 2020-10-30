@@ -12,7 +12,7 @@
                 Full Stack Developer
               </v-card-subtitle>
               <v-card-text>
-                <v-img src="https://raw.githubusercontent.com/Alex-Bailon/Alex-Bailon.github.io/master/assets/images/AlexBailon.jpg" />
+                <v-img src="https://raw.githubusercontent.com/Alex-Bailon/Alex-Bailon.github.io/master/assets/images/AlexGCWest.jpg" />
                 <v-timeline dense>
                   <v-timeline-item v-for="( item, i ) in timelineItems" :key="i" :color="item.color" :icon="item.icon" fill-dot>
                     <p><strong>{{ item.title }}</strong> <br/> {{ item.text }}</p>
@@ -25,7 +25,17 @@
             </v-card>
           </v-col>
           <v-col cols="12" sm="8">
-            <HelloWorld/>
+            <v-card>
+              <v-tabs grow>
+                <v-tab @click="activeTab='about'">About Me</v-tab>
+                <v-tab @click="activeTab='portfolio'">Portfolio</v-tab>
+                <v-tab @click="activeTab='contact'">Contact</v-tab>
+              </v-tabs>
+            </v-card>
+            <div class="pb-5"></div>
+            <About v-if="activeTab == 'about'" />
+            <Portfolio v-else-if="activeTab == 'portfolio'" />
+            <Contact v-else />
           </v-col>
         </v-row>
       </v-container>
@@ -34,12 +44,15 @@
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld';
+import About from './components/About';
+import Portfolio from './components/Portfolio'
+import Contact from './components/Contact'
 
 export default {
   name: 'App',
   data(){
     return {
+      activeTab: 'about',
       timelineItems: [
         {
           title: 'Availability:',
@@ -66,10 +79,26 @@ export default {
           icon: 'mdi-crosshairs-gps'
         },
       ],
+      socials: [
+        {
+          icon: 'mdi-facebook',
+          color: 'indigo',
+        },
+        {
+          icon: 'mdi-linkedin',
+          color: 'cyan darken-1',
+        },
+        {
+          icon: 'mdi-instagram',
+          color: 'red lighten-3',
+        }
+      ]
     }
   },
   components: {
-    HelloWorld,
+    About,
+    Portfolio,
+    Contact
   },
 };
 </script>
