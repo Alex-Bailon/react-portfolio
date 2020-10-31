@@ -1,6 +1,7 @@
 <template>
+  <v-parallax height="100%" src="https://images.unsplash.com/photo-1551651056-2cb4d5c104be?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80">
   <v-app>
-    <v-main>
+    <v-main >
       <v-container >
         <v-row>
           <v-col cols="12" sm="4">
@@ -41,6 +42,7 @@
       </v-container>
     </v-main>
   </v-app>
+  </v-parallax>
 </template>
 
 <script>
@@ -102,3 +104,9 @@ export default {
   },
 };
 </script>
+
+<style scoped>
+#app{
+  background: none;
+}
+</style>

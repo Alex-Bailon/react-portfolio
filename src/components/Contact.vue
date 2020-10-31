@@ -6,8 +6,11 @@ export default {
 
 <template>
   <v-card>
-    <v-card-subtitle class="primary--text font-weight-black">
+    <v-card-title class="primary--text font-weight-black">
       Contact
-    </v-card-subtitle>
+    </v-card-title>
+    <v-form >
+      
+    </v-form>
   </v-card>
 </template>
