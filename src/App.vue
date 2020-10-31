@@ -40,7 +40,7 @@
           </v-col>
           <v-col cols="12" md="8">
             <v-card>
-              <v-tabs grow>
+              <v-tabs right grow>
                 <v-tab @click="activeTab='about'">About Me</v-tab>
                 <v-tab @click="activeTab='portfolio'">Portfolio</v-tab>
                 <v-tab @click="activeTab='contact'">Contact</v-tab>
