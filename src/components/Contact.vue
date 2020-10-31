@@ -1,8 +1,36 @@
 <script>
+import axios from 'axios'
 export default {
   name: 'Contact',
   data(){
     return {
+      form: {
+        name: '',
+        email: '',
+        msg: ''
+      }
+    }
+  },
+  methods: {
+    encode (data) {
+      return Object.keys(data)
+        .map(
+          key => `${encodeURIComponent(key)}=${encodeURIComponent(data[key])}`
+        )
+        .join("&");
+    },
+    handleSubmit () {
+      const axiosConfig = {
+        header: { "Content-Type": "application/x-www-form-urlencoded" }
+      };
+      axios.post(
+        "/",
+        this.encode({
+          "form-name": "ask-question",
+          ...this.form
+        }),
+        axiosConfig
+      );
     }
   }
 }
@@ -14,10 +42,24 @@ export default {
       Contact
     </v-card-title>
     <v-card-text>
-      Phone: <a href="tel:+17739493259">(773)949-3259</a> <br/>
-      Email: <a href="mailto:abailon949@gmail.com">abailon949@gmail.com</a> <br/>
-      Linked-In: <a href="https://www.linkedin.com/in/alex-bailon" target="_blank">Alex-Bailon</a><br/>
-      GitHub: <a href="https://github.com/Alex-Bailon" target="_blank">Alex-Bailon</a>
+      <v-form name="ask-question" @submit.prevent="handleSubmit">
+        <v-text-field
+          v-model="form.name"
+          label="Name"
+          outlined
+        ></v-text-field>
+        <v-text-field
+          v-model="form.email"
+          label="Email"
+          outlined
+        ></v-text-field>
+        <v-textarea
+          v-model="form.msg"
+          outlined
+          label="Message"
+        ></v-textarea>
+        <v-btn type="submit">Send</v-btn>
+      </v-form>
     </v-card-text>
   </v-card>
 </template>
