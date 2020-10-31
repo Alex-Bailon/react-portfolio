@@ -1,11 +1,11 @@
 <template>
-  <v-parallax height="100%" src="https://images.unsplash.com/photo-1566410824233-a8011929225c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80">
+  <v-parallax height="100%" src="https://images.unsplash.com/photo-1566410824233-a8011929225c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80" >
   <v-app>
     <v-main >
       <v-container >
         <v-row>
-          <v-col class="d-flex justify-end" cols="12" md="4">
-            <v-card max-height="740" :class="{'fixed': $vuetify.breakpoint.lgAndUp && activeTab == 'portfolio'}" class="fixedMedia mx-auto" max-width="344">
+          <v-col cols="12" md="4">
+            <v-card class="mx-auto" max-width="344">
               <v-card-title class="pt-2">
                 Alex Bailon
               </v-card-title>
@@ -120,19 +120,4 @@ export default {
 #app{
   background: none;
 }
-.fixed{
-  position: fixed;
-}
-@media only screen and (min-width: 960px) and (min-height: 790px) {
-  .fixedMedia {
-    position: fixed;
-  }
-}
-@media only screen and (max-width: 1264px) and (min-width: 960px) {
-  .fixedMedia {
-    width: 276px;
-  }
-}
-
-
 </style>
