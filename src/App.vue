@@ -5,7 +5,7 @@
       <v-container >
         <v-row>
           <v-col cols="12" md="4">
-            <v-card class="fixed mx-auto" max-width="344">
+            <v-card :class="{'fixed': $vuetify.breakpoint.lgAndUp}" class="fixedMedia mx-auto" max-width="344">
               <v-card-title>
                 Alex Bailon
               </v-card-title>
@@ -120,16 +120,19 @@ export default {
 #app{
   background: none;
 }
-
+.fixed{
+  position: fixed;
+}
 @media only screen and (min-width: 960px) and (min-height: 790px) {
-  .fixed {
+  .fixedMedia {
     position: fixed;
   }
 }
 @media only screen and (max-width: 1264px) and (min-width: 960px) {
-  .fixed {
+  .fixedMedia {
     width: 276px;
   }
 }
+
 
 </style>
