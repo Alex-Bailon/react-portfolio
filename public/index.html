@@ -14,11 +14,10 @@
       <strong>We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
     </noscript>
     <!--dummy form so netlify knows what's coming-->
-    <form name="contact-speaker" netlify netlify-honeypot="bot-field" hidden>
+    <form name="ask-question" netlify netlify-honeypot="bot-field" hidden>
       <input type="text" name="name" />
       <input type="text" name="email" />
-      <textarea name="message"></textarea>
-      <input type="text" name="speaker" />
+      <textarea name="msg"></textarea>
     </form>
     <div id="app"></div>
     <!-- built files will be auto injected -->
