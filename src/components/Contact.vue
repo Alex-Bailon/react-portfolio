@@ -42,24 +42,38 @@ export default {
       Contact
     </v-card-title>
     <v-card-text>
-      <v-form name="ask-question" @submit.prevent="handleSubmit">
+      <form 
+        name="ask-question" 
+        method="POST"
+        data-netlify="true"
+        data-netlify-honeypot="bot-field"
+        @submit.prevent="handleSubmit"
+        >
+        <input
+        type="hidden"
+        name="form-name"
+        value="ask-question"
+        >
         <v-text-field
           v-model="form.name"
           label="Name"
           outlined
+          required
         ></v-text-field>
         <v-text-field
           v-model="form.email"
           label="Email"
           outlined
+          required
         ></v-text-field>
         <v-textarea
           v-model="form.msg"
           outlined
+          required
           label="Message"
         ></v-textarea>
         <v-btn type="submit">Send</v-btn>
-      </v-form>
+      </form>
     </v-card-text>
   </v-card>
 </template>
