@@ -24,7 +24,7 @@ export default {
         header: { "Content-Type": "application/x-www-form-urlencoded" }
       };
       axios.post(
-        "/",
+        "https://alex-bailon.netlify.app/",
         this.encode({
           "form-name": "ask-question",
           ...this.form
