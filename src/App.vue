@@ -33,7 +33,7 @@
                   </v-timeline-item>
                 </v-timeline>
                 <v-btn block depressed outlined href="https://alex-bailon.github.io/assets/images/A_Bailon_Resume.pdf" target="_blank">
-                  <v-icon>mdi-file-document</v-icon> Resume
+                  <v-icon left>mdi-file-document</v-icon> Resume
                 </v-btn>
               </v-card-text>
             </v-card>

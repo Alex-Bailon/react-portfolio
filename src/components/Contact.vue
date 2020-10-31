@@ -8,10 +8,17 @@ export default {
         name: '',
         email: '',
         msg: ''
-      }
+      },
+      formFilled: this.formStatus(),
+      formSubmit: false
     }
   },
   methods: {
+    formStatus() {
+      if(this.name != '' && this.email != "" && this.msg != '')
+      return true
+      else false
+    },
     encode (data) {
       return Object.keys(data)
         .map(
@@ -20,6 +27,7 @@ export default {
         .join("&");
     },
     handleSubmit () {
+      this.formSubmit = true
       const axiosConfig = {
         header: { "Content-Type": "application/x-www-form-urlencoded" }
       };
@@ -63,6 +71,7 @@ export default {
         <v-text-field
           v-model="form.email"
           label="Email"
+          type="email"
           outlined
           required
         ></v-text-field>
@@ -72,8 +81,12 @@ export default {
           required
           label="Message"
         ></v-textarea>
-        <v-btn type="submit">Send</v-btn>
+        <v-btn outlined width="125" :disabled="!formFilled" type="submit">Send<v-icon right small >mdi-send</v-icon></v-btn>
       </form>
+      <v-card-text v-if="formSubmit" class="text-center primary--text font-weight-black">
+        Thank you for the submittion! <br/>
+        I'll get back to you soon.
+      </v-card-text>
     </v-card-text>
   </v-card>
 </template>
