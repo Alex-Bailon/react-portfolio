@@ -6,7 +6,7 @@
         <v-row>
           <v-col cols="12" md="4">
             <v-card max-height="740" :class="{'fixed': $vuetify.breakpoint.lgAndUp}" class="fixedMedia mx-auto" max-width="344">
-              <v-card-title>
+              <v-card-title class="pt-2">
                 Alex Bailon
               </v-card-title>
               <v-card-subtitle class="pb-0">
