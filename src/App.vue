@@ -1,11 +1,11 @@
 <template>
-  <v-parallax height="100%" src="https://images.unsplash.com/photo-1551651056-2cb4d5c104be?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80">
+  <v-parallax height="100%" src="https://images.unsplash.com/photo-1566410824233-a8011929225c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80">
   <v-app>
     <v-main >
       <v-container >
         <v-row>
           <v-col cols="12" md="4">
-            <v-card max-height="740" :class="{'fixed': $vuetify.breakpoint.lgAndUp}" class="fixedMedia mx-auto" max-width="344">
+            <v-card max-height="740" :class="{'fixed': activeTab == 'portfolio'}" class="fixedMedia mx-auto" max-width="344">
               <v-card-title class="pt-2">
                 Alex Bailon
               </v-card-title>
