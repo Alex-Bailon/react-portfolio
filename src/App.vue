@@ -4,7 +4,7 @@
     <v-main >
       <v-container >
         <v-row>
-          <v-col cols="12" md="4">
+          <v-col class="d-flex justify-end" cols="12" md="4">
             <v-card max-height="740" :class="{'fixed': $vuetify.breakpoint.lgAndUp && activeTab == 'portfolio'}" class="fixedMedia mx-auto" max-width="344">
               <v-card-title class="pt-2">
                 Alex Bailon
