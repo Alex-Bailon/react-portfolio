@@ -76,7 +76,7 @@ export default {
           icon: 'mdi-calendar-check-outline'
         },
         {
-          title: 'Developement Expreience:',
+          title: 'Developement Experience:',
           text: 'One year',
           color: 'green lighten-1',
           icon: 'mdi-briefcase-outline'
