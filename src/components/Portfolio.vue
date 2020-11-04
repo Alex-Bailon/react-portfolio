@@ -16,7 +16,7 @@
         {
           img: 'https://raw.githubusercontent.com/Alex-Bailon/Alex-Bailon.github.io/master/assets/images/homeBody.png',
           title: 'Homebody',
-          text: 'A full stack health app that allows user to sing-up and login so that they can keep track of their daily nutrition intake.',
+          text: 'A full stack health app that allows user to sign-up and login so that they can keep track of their daily nutrition intake.',
           live: 'https://health-app-2020.herokuapp.com/',
           github: 'https://github.com/Alex-Bailon/health-app',
           col: '6'
