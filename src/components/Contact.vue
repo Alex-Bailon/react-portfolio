@@ -10,7 +10,18 @@ export default {
         msg: ''
       },
       formFilled: this.formStatus(),
-      formSubmit: false
+      snackbar: false
+    }
+  },
+  computed: {
+    required() {
+      return v => !!v || 'Field is required'
+    },
+    emailRules() {
+      return [
+        v => v.length <= 320 || 'Email is too long',
+        v => /\S+@\S+\.\S+/.test(v) || 'E-mail must be valid',
+      ]     
     }
   },
   methods: {
@@ -26,20 +37,30 @@ export default {
         )
         .join("&");
     },
-    handleSubmit () {
-      this.formSubmit = true
-      const axiosConfig = {
-        header: { "Content-Type": "application/x-www-form-urlencoded" }
-      };
-      axios.post(
-        "https://alex-bailon.netlify.app/",
-        this.encode({
-          "form-name": "ask-question",
-          ...this.form
-        }),
-        axiosConfig
-      );
-    }
+    async handleSubmit () {
+      if ( this.$refs.form.validate()){
+        try {
+          const axiosConfig = {
+            header: { 
+              "Content-Type": "application/x-www-form-urlencoded",
+              'Access-Control-Allow-Origin': '*',
+            }
+          };
+          await axios.post(
+            "https://alex-bailon.netlify.app/",
+            this.encode({
+              "form-name": "ask-question",
+              ...this.form
+            }),
+            axiosConfig
+          )
+          this.snackbar = true
+        }
+        catch (err) {
+          console.log('error', err)
+        }
+      }
+    },
   }
 }
 </script>
@@ -57,36 +78,51 @@ export default {
         data-netlify-honeypot="bot-field"
         @submit.prevent="handleSubmit"
         >
-        <input
-        type="hidden"
-        name="form-name"
-        value="ask-question"
-        >
-        <v-text-field
-          v-model="form.name"
-          label="Name"
-          outlined
-          required
-        ></v-text-field>
-        <v-text-field
-          v-model="form.email"
-          label="Email"
-          type="email"
-          outlined
-          required
-        ></v-text-field>
-        <v-textarea
-          v-model="form.msg"
-          outlined
-          required
-          label="Message"
-        ></v-textarea>
-        <v-btn outlined width="125" :disabled="!formFilled" type="submit">Send<v-icon right small >mdi-send</v-icon></v-btn>
+        <v-form ref="form">
+          <input
+          type="hidden"
+          name="form-name"
+          value="ask-question"
+          >
+          <v-text-field
+            v-model="form.name"
+            label="Name"
+            outlined
+            :rules="[required]"
+            :disabled="snackbar"
+          ></v-text-field>
+          <v-text-field
+            v-model="form.email"
+            label="Email"
+            type="email"
+            outlined
+            :rules="emailRules"
+            :disabled="snackbar"
+          ></v-text-field>
+          <v-textarea
+            v-model="form.msg"
+            outlined
+            :rules="[required]"
+            label="Message"
+            :disabled="snackbar"
+          ></v-textarea>
+
+        </v-form>
+        <v-btn outlined width="125" :disabled="snackbar" type="submit">Send<v-icon right small >mdi-send</v-icon></v-btn>
       </form>
-      <v-card-text v-if="formSubmit" class="text-center primary--text font-weight-black">
-        Thank you for the submittion! <br/>
-        I'll get back to you soon.
-      </v-card-text>
     </v-card-text>
+
+    <v-snackbar
+      v-model="snackbar"
+      color="success"
+      transition="fade-transition"
+      centered      
+      multi-line
+      dark
+      shaped
+    >
+      Thank you for the submittion! <br/> I'll be in contact with you soon.
+    </v-snackbar>
+
   </v-card>
 </template>
