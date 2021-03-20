@@ -1,16 +1,19 @@
 <script>
   import axios from 'axios'
+  import { mapState } from 'vuex'
   export default {
     name: 'About',
-    data(){
-      return {
-        aboutme: {}
+    async mounted(){
+      if ( Object.keys(this.aboutme).length == 0 ){
+        const aboutme = await axios.get('https://api.cosmicjs.com/v2/buckets/nuxt-portfolio-production/objects/6056606482408b0007b7f1d2?pretty=true&read_key=LPx3LELVgjXcFbGKD3xjBQGNVd87FsFbK9bbCeO9MJ8lFGNcLN&props=slug,title,content,metadata')
+        this.$store.dispatch('SET_FIELD', { key: 'aboutme', value: aboutme.data.object })
       }
     },
-    async mounted(){
-      const aboutme = await axios.get('https://api.cosmicjs.com/v2/buckets/nuxt-portfolio-production/objects/6056606482408b0007b7f1d2?pretty=true&read_key=LPx3LELVgjXcFbGKD3xjBQGNVd87FsFbK9bbCeO9MJ8lFGNcLN&props=slug,title,content,metadata')
-      this.aboutme = aboutme.data.object
-    }
+    computed: {
+      ...mapState({
+        aboutme: state => state.aboutme
+      })
+    },
   }
 </script>
 

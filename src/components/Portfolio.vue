@@ -1,12 +1,17 @@
 <script>
 import axios from 'axios'
+import { mapState } from 'vuex'
   export default {
-    data: () => ({
-      projects: []
-    }),
     async mounted() {
-      const projects = await axios.get('https://api.cosmicjs.com/v2/buckets/nuxt-portfolio-production/objects?pretty=true&query=%7B%22type%22%3A%22projects%22%7D&read_key=LPx3LELVgjXcFbGKD3xjBQGNVd87FsFbK9bbCeO9MJ8lFGNcLN&limit=20&props=slug,title,content,metadata')
-      this.projects = projects.data.objects
+      if ( Object.keys(this.projects).length == 0 ) {
+        const projects = await axios.get('https://api.cosmicjs.com/v2/buckets/nuxt-portfolio-production/objects?pretty=true&query=%7B%22type%22%3A%22projects%22%7D&read_key=LPx3LELVgjXcFbGKD3xjBQGNVd87FsFbK9bbCeO9MJ8lFGNcLN&limit=20&props=slug,title,content,metadata')
+        this.$store.dispatch('SET_FIELD', { key: 'projects', value: projects.data.objects })
+      }
+    },
+    computed: {
+      ...mapState({
+        projects: state => state.projects
+      })
     },
     methods: {
     },
