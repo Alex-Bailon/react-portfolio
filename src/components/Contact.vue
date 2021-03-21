@@ -39,26 +39,21 @@ export default {
     },
     async handleSubmit () {
       if ( this.$refs.form.validate()){
-        try {
-          const axiosConfig = {
-            header: { 
-              "Content-Type": "application/x-www-form-urlencoded",
-              'Access-Control-Allow-Origin': '*',
-            }
-          };
-          await axios.post(
-            "https://alex-bailon.netlify.app/",
-            this.encode({
-              "form-name": "ask-question",
-              ...this.form
-            }),
-            axiosConfig
-          )
-          this.snackbar = true
-        }
-        catch (err) {
-          console.log('error', err)
-        }
+        const axiosConfig = {
+          header: { 
+            "Content-Type": "application/x-www-form-urlencoded",
+            'Access-Control-Allow-Origin': '*',
+          }
+        };
+        this.snackbar = true
+        await axios.post(
+          "https://alex-bailon.netlify.app/",
+          this.encode({
+            "form-name": "ask-question",
+            ...this.form
+          }),
+          axiosConfig
+        )
       }
     },
   }
@@ -70,6 +65,9 @@ export default {
     <v-card-title class="primary--text font-weight-black">
       Contact
     </v-card-title>
+    <v-card-subtitle>
+      For the quickest response please reach out to me on <a href="https://www.linkedin.com/in/alex-bailon">LinkedIn</a>
+    </v-card-subtitle>
     <v-card-text>
       <form 
         name="ask-question" 

@@ -96,8 +96,11 @@ export default {
   </v-parallax>
 </template>
 
-<style scoped>
+<style>
 #app{
   background: none;
+}
+a {
+  text-decoration: none;
 }
 </style>
