@@ -10,7 +10,8 @@ export default {
         msg: ''
       },
       formFilled: this.formStatus(),
-      snackbar: false
+      snackbar: false,
+      submit: false
     }
   },
   computed: {
@@ -46,6 +47,7 @@ export default {
           }
         };
         this.snackbar = true
+        this.submit = true
         await axios.post(
           "https://alex-bailon.netlify.app/",
           this.encode({
@@ -87,7 +89,7 @@ export default {
             label="Name"
             outlined
             :rules="[required]"
-            :disabled="snackbar"
+            :disabled="submit"
           ></v-text-field>
           <v-text-field
             v-model="form.email"
@@ -95,18 +97,18 @@ export default {
             type="email"
             outlined
             :rules="emailRules"
-            :disabled="snackbar"
+            :disabled="submit"
           ></v-text-field>
           <v-textarea
             v-model="form.msg"
             outlined
             :rules="[required]"
             label="Message"
-            :disabled="snackbar"
+            :disabled="submit"
           ></v-textarea>
 
         </v-form>
-        <v-btn outlined width="125" :disabled="snackbar" type="submit">Send<v-icon right small >mdi-send</v-icon></v-btn>
+        <v-btn outlined width="125" :disabled="submit" type="submit">Send<v-icon right small >mdi-send</v-icon></v-btn>
       </form>
     </v-card-text>
 
