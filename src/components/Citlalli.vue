@@ -19,7 +19,7 @@ export default {
 
 <template>
   <v-container>
-    <v-row>
+    <v-row style="color: darkblue">
       <v-col cols="12" style="text-align: center">
         <h1>Hi Citlalli ❤️ </h1>
         <p>Made this little page for you, hope it help!</p>
