@@ -1,7 +1,6 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
 import App from './App.vue'
-import Citlalli from './components/Citlalli.vue'
 import vuetify from './plugins/vuetify';
 
 Vue.config.productionTip = false
@@ -25,22 +24,9 @@ const store = new Vuex.Store({
   }
 })
 
-const routes = {
-  '/': App,
-  '/citlalli': Citlalli
-}
-
 new Vue({
   vuetify,
+  render: h => h(App),
   store: store,
-  data: {
-    currentRoute: window.location.pathname
-  },
-  computed: {
-    ViewComponent () {
-      return routes[this.currentRoute]
-    }
-  },
-  render (h) { return h(this.ViewComponent) },
 }).$mount('#app')
 
